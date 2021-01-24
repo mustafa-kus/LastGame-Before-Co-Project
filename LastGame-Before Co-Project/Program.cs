@@ -64,6 +64,23 @@ namespace LastGame_Before_Co_Project
             campaign2.Delete(game2);
 
             Console.WriteLine();
+            Console.WriteLine("Satış Yapılıyor");
+            Console.WriteLine("------------------------------");
+            // Satış Yapılıyor
+            GameSale gameSale1 = new GameSale();
+            gameSale1.Id = 1;
+            gameSale1.PlayerId = 1;
+            gameSale1.GameId = 1;
+            gameSale1.Quantity = 1;
+            gameSale1.CampaignId = 1;
+            gameSale1.TotalPrice = 100;
+
+            GameSaleManager gameSaleManager = new GameSaleManager();
+            gameSaleManager.OrderBuy(gameSale1);
+            gameSaleManager.OrderUpdate(gameSale1);
+            gameSaleManager.OrderDelete(gameSale1);
+
+            Console.WriteLine();
             Console.WriteLine("Tüm işlemler tamamlandı.");
         }
     }
